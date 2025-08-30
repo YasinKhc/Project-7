@@ -325,13 +325,7 @@ together later.</p>
 </div>
 <div id="exploratory-data-analysis" class="section level2">
 <h2>Exploratory Data Analysis</h2>
-<p>I will not focus much on visualizing the relationships between
-variables. Below, we see a boxplot showing the relationship between the
-outcome and elevation. It is seen that elevation of volcanoes with
-Exp_Sev VEI have higher elevation than the other two categories.
-Volcanoes with Non_Gen and Vary_large VEI seem to not differ
-significantly in terms of elevation, though the variability of elevation
-for Very_large category is higher than that of Non_Gen category.</p>
+<p>I will not focus extensively on visualizing the relationships between variables. Below is a boxplot illustrating the relationship between the outcome and elevation. It appears that volcanoes classified as Exp_Sev VEI tend to have higher elevations compared to the other two categories. Volcanoes with Non_Gen and Very_large VEI show no substantial difference in elevation; however, the elevation variability is greater for the Very_large category than for the Non_Gen category.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>full_data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> elevation, <span class="at">x =</span> vei_cat, <span class="at">fill =</span> vei_cat)) <span class="sc">+</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&#39;Volcano Explosivity Index Category&#39;</span>, <span class="at">y =</span> <span class="st">&#39;Elevation&#39;</span>) <span class="sc">+</span></span>
